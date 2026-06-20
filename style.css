@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif; /* 귀여운 폰트 적용 */
+}
+
+body {
+    background-color: #FDF6E3; /* 따뜻한 파스텔 베이지 */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 30px;
+    text-align: center;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+h1, h2, h3 {
+    color: #FF9AA2; /* 파스텔 핑크 */
+}
+
+.login-box, .point-control, .point-display {
+    background-color: #E2F0CB; /* 파스텔 그린 */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.login-box:nth-child(3) {
+    background-color: #C7CEEA; /* 파스텔 퍼플 */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #FFB7B2;
+}
+
+button {
+    background-color: #FFDAC1; /* 파스텔 오렌지 */
+    color: #555;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #FFB7B2;
+}
+
+.logout-btn {
+    background-color: #e0e0e0;
+    width: auto;
+    padding: 5px 15px;
+    font-size: 14px;
+    float: right;
+    margin-top: -40px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid #FF9AA2;
+}
+
+.total-points {
+    font-size: 36px;
+    color: #FF9AA2;
+    font-weight: bold;
+}
+
+.help-text {
+    font-size: 12px;
+    color: #888;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리반 포인트 쑥쑥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div id="login-screen" class="screen active">
+            <h1>🌟 우리반 포인트 쑥쑥 🌟</h1>
+            <div class="login-box">
+                <h3>선생님 로그인</h3>
+                <input type="password" id="admin-code" placeholder="관리자 코드 입력">
+                <button onclick="login('admin')">관리자 접속</button>
+            </div>
+            <div class="login-box">
+                <h3>학생 로그인</h3>
+                <input type="text" id="student-code" placeholder="학생 코드 입력">
+                <button onclick="login('student')">내 포인트 확인</button>
+            </div>
+            <p class="help-text">초기 코드 - 선생님: admin / 학생: stu1, stu2, stu3</p>
+        </div>
+
+        <div id="admin-screen" class="screen">
+            <h2>👩‍🏫 선생님 화면</h2>
+            <button class="logout-btn" onclick="logout()">로그아웃</button>
+            
+            <div class="point-control">
+                <h3>포인트 지급하기</h3>
+                <select id="student-select"></select>
+                <input type="number" id="point-amount" placeholder="포인트 점수 (예: 10)">
+                <input type="text" id="point-reason" placeholder="지급 사유 (예: 발표 우수)">
+                <button onclick="givePoints()">지급하기</button>
+            </div>
+
+            <div class="student-list">
+                <h3>학생별 포인트 현황</h3>
+                <ul id="admin-student-list"></ul>
+            </div>
+        </div>
+
+        <div id="student-screen" class="screen">
+            <h2 id="student-welcome">👦👧 학생 화면</h2>
+            <button class="logout-btn" onclick="logout()">로그아웃</button>
+            
+            <div class="point-display">
+                <h3>나의 현재 포인트</h3>
+                <div class="total-points" id="student-total-points">0 P</div>
+            </div>
+
+            <div class="history-list">
+                <h3>포인트 적립 내역</h3>
+                <ul id="student-history"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
